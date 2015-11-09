@@ -7,21 +7,17 @@ import {Component} from 'angular2/angular2';
   styleUrls: ['app/components/album-cover/album-cover.css'],
   providers: [],
   directives: [],
-  pipes: []
+  pipes: [],
+  properties: ['album']
 })
 export class AlbumCover {
   album: any;
 
   constructor() {
-    this.album = {
-      artist: 'Ramones',
-      albumName: 'Ramones',
-      image: '/images/ramones-ramones.jpg'
-    };
   }
 
   open() {
-    alert('Open ' + this.album.artist + ' - ' + this.album.albumName);
+    alert('Open ' + this.album.artist + ' - ' + this.album.name);
   }
 
 }

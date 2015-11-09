@@ -5,8 +5,6 @@
 </div>
 <div id="genresAndMoods">
   <div class="row fivecolumns">
-    <album-cover></album-cover>
-    <album-cover></album-cover>
-    <album-cover></album-cover>
+    <album-cover *ng-for="#album of albums" [album]="album"></album-cover>
   </div>
 </div>
