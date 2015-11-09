@@ -1,6 +1,6 @@
 import {Component,NgFor} from 'angular2/angular2';
 import {AlbumCover} from '../album-cover/album-cover';
-import {Http} from 'angular2/http';
+import {Store} from '../../services/store/store';
 
 @Component({
   selector: 'albums-page',
@@ -13,11 +13,7 @@ import {Http} from 'angular2/http';
 export class AlbumsPage {
   albums: any = [];
 
-  constructor(private http: Http) {
-    http
-      .get('/albums.json')
-      .map(response => response.json()["albums"])
-      .subscribe(albums => this.albums = albums);
+  constructor(private store: Store) {
+    this.store.allAlbums().subscribe(albums => this.albums = albums);
   }
-
 }
