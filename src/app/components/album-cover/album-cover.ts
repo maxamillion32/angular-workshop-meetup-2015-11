@@ -1,5 +1,5 @@
 import {Component} from 'angular2/angular2';
-
+import {Router} from 'angular2/router';
 
 @Component({
   selector: 'album-cover',
@@ -13,11 +13,10 @@ import {Component} from 'angular2/angular2';
 export class AlbumCover {
   album: any;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   open() {
-    alert('Open ' + this.album.artist + ' - ' + this.album.name);
+    this.router.navigate(['Tracks', { album_id: this.album.id }]);
   }
-
 }

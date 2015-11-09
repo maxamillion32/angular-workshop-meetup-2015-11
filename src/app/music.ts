@@ -1,11 +1,17 @@
 import {Component, bootstrap} from 'angular2/angular2';
-import {AlbumsPage} from './components/albums-page/albums-page';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {AlbumsPage} from './components/albums-page/albums-page';
+import {TracksPage} from './components/tracks-page/tracks-page';
 
 @RouteConfig([
   {
     path: '/',
     component: AlbumsPage
+  },
+  {
+    path: '/:album_id',
+    as: 'Tracks',
+    component: TracksPage
   }
 ])
 @Component({
