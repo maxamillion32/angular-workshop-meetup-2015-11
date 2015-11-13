@@ -1,4 +1,4 @@
-# Angular Workshop
+# Workshop: Angular 2 with angular-cli
 
 ![Music](./sources/screen04.png)
 
